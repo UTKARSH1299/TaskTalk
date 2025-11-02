@@ -1,31 +1,98 @@
-# 🧩 TaskTalk — Full Stack App (Flask + React)
+# 🧩 TaskTalk — Full Stack Flask + React Comment System  
 
-A simple full-stack project built as part of the **Associate Software Engineer (Python/React)** internship at **Better** (via Internshala).  
-This app allows users to add, view, and manage comments under a single task — demonstrating both **backend (Python Flask)** and **frontend (React)** integration.
-
----
-
-## 🚀 Features
-- Create and view comments dynamically.
-- Live connection between Flask (backend) and React (frontend).
-- REST API built with Flask and SQLAlchemy (using SQLite database).
-- React frontend built with Axios for API calls.
-- Simple, clean, and easy-to-explain UI.
+TaskTalk is a **full-stack comment management web app** built with **Flask (Python)** for the backend and **React.js** for the frontend.  
+It allows users to add and view comments in real time, demonstrating seamless communication between frontend and backend — developed as part of the **Better Internship (Associate Software Engineer – Python/React)** assessment.  
 
 ---
 
-## 🧠 Tech Stack
+## 🧠 Overview  
+
+The goal of TaskTalk is to demonstrate:  
+- 🔹 Backend API creation using **Flask + SQLAlchemy**  
+- 🔹 Frontend integration with **React + Axios**  
+- 🔹 Real-time communication between client and server  
+- 🔹 Clean folder structure and professional development workflow  
+
+This project showcases a complete **full-stack understanding** of REST APIs, frontend integration, and environment setup.  
+
+---
+
+## ⚙️ Tech Stack  
+
 | Layer | Technology |
-|--------|-------------|
-| Frontend | React.js, Axios |
-| Backend | Python Flask |
-| Database | SQLite (via SQLAlchemy ORM) |
-| Tools | VS Code, Node.js, npm |
+|:------|:------------|
+| 💻 Frontend | React.js (Axios for API calls) |
+| 🔙 Backend | Flask (Python) |
+| 🗄️ Database | SQLite (via SQLAlchemy ORM) |
+| 🌐 Communication | REST API |
+| 🧰 Tools | VS Code, Git, Node.js, Python Virtual Environment |
 
 ---
 
-## 🛠️ Backend Setup (Flask)
+## 📁 Project Structure  
 
-### 1️⃣ Move into backend folder
-```bash
-cd backend
+better-assessment/
+│
+├── backend/
+│ ├── app.py # Flask API routes (backend logic)
+│ ├── models.py # Database models
+│ └── venv/ # Python virtual environment
+│
+├── frontend-react/
+│ ├── src/
+│ │ ├── App.js # React UI logic (Axios integration)
+│ │ ├── App.css # Styling
+│ │ └── index.js # Root entry point
+│ ├── package.json # React dependencies
+│
+├── .gitignore # Ignored folders (node_modules, venv, etc.)
+├── README.md # Project documentation
+
+yaml
+Copy code
+
+---
+
+## 🚀 How to Run Locally  
+
+### 🧩 Backend Setup (Flask)  
+1. Open a terminal and move to the backend folder:  
+   ```bash
+   cd backend
+   python -m venv venv
+   venv\Scripts\activate
+   pip install flask flask-cors flask-sqlalchemy
+Start the Flask server:
+
+bash
+Copy code
+python app.py
+✅ Server runs at: http://127.0.0.1:5000
+
+💻 Frontend Setup (React)
+Open another terminal in the frontend-react folder:
+
+bash
+Copy code
+cd frontend-react
+npm install
+npm start
+✅ Frontend runs at: http://localhost:3000
+
+💬 Usage
+Enter your name and comment in the text fields.
+
+Click “Add” to post your comment.
+
+Comments instantly appear in the list with your name and timestamp.
+
+Data is fetched and posted using Axios calls to Flask API endpoints (/api/comments).
+
+🌟 Key Features
+✅ Simple REST API built with Flask
+✅ CORS-enabled communication between backend and frontend
+✅ Real-time UI updates with React state
+✅ Optional SQLite database support
+✅ Clean, beginner-friendly structure
+
+![alt text](<Screenshot (436).png>)
